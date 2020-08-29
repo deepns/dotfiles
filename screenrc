@@ -1,0 +1,33 @@
+# Set the escape keystroke to Ctrl-L (the default is Ctrl-A)
+escape "^Ll"
+
+# Scroll back up to 50000 lines
+defscrollback 50000
+
+# Turn off visual bell.
+vbell off
+
+# Auto detach on hangup rather than terminating it
+autodetach on
+
+# Enable 256 color term
+term xterm-256color
+
+# I find this distracting, but keeping it in case I need it later sometime.
+# caption always "%{kB}%?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{kB}%?%+Lw%?"
+
+# %{g} - green
+# %{G} - bright green
+# %H - host name
+# %C - Time in 12hr format
+# %A - AM/PM
+# %n - window number
+# %t - window title
+# %-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%< -  available windows centered at the current window and truncated to the available width. The current window is displayed white on blue.
+# %D, %M/%d/%Y - Date in MMM/DD/YYYY format
+# See https://www.gnu.org/software/screen/manual/html_node/String-Escapes.html
+hardstatus alwayslastline "%{= kg}[ %{G}%H %C %A %{g}] %-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%< %=%{g} %D, %M/%d/%Y "
+
+# backup hardstatus with titles centered around
+# hardstatus alwayslastline '%{= kg}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{=b kR}(%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?% Lw%?%?%= %{g}]%{=b C}[ %d %M %c ]%{W}
+
