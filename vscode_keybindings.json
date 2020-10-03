@@ -1,0 +1,39 @@
+[
+    {
+        "key": "cmd+k /",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus",
+        "args": {
+            "name": "Insert current date"
+        }
+    },
+    {
+        "key": "cmd+k `",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus",
+        "args": {
+            "name": "Insert fenced code block"
+        }
+    },
+    {
+        "key": "cmd+k l",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus",
+        "args": {
+            "snippet": "[${1:text}](${2})"
+        }
+    },
+    {
+        "key": "cmd+k t",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus",
+        "args": {
+            "snippet": "- [ ] "
+        }
+    },
+    {
+        "key":"cmd+shift+l",
+        "command": "editor.action.openLink",
+        "when": "editorTextFocus"
+    }
+]
