@@ -96,6 +96,10 @@ endfun
 " \ + w to clear the trailing whitespace
 :noremap <Leader>w :call TrimTrailingWhiteSpace()<CR>
 
+" Toggle line number and relative numbers
+" Helps in not including the line numbers when copying text
+:noremap <Leader>tn :set number! relativenumber!<CR>
+
 " Turn on filetype detection, plugin loading and indentation on
 " implicitly turns filetype on
 filetype plugin indent on
