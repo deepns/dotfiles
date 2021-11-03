@@ -9,6 +9,9 @@ alias scr='screen -r' # resume screen session
 alias scrd='screen -rD' # resume screen session which is already attached.
 alias egrep='egrep --color=always' # Turn on search term highlighting in grep results
 
+## Python related
+export PYTHONSTARTUP=$HOME/.pythonrc.py
+
 # any local system specific settings go in .bashrc.local
 if [[ -e ~/.bashrc.local ]]; then
     . ~/.bashrc.local
