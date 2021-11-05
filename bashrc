@@ -13,7 +13,7 @@ fi
 
 # any local system specific settings go in .bashrc.local
 if [ -e $HOME/.bashrc.local ]; then
-    source ~/.bashrc.local
+    source $HOME/.bashrc.local
 fi
 
 ## Python related
