@@ -112,3 +112,7 @@ endif
 
 " list spaces as _ and tabs as >~
 "set listchars=space:_,tab:>~ list
+"
+"enable modeline
+set modeline
+set modelines=5
