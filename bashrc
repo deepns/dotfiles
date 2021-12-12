@@ -1,3 +1,5 @@
+# vim: ft=bash
+
 # Common settings
 PS1="\W \$ "
 

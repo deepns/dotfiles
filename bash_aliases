@@ -1,3 +1,5 @@
+# vim: ft=bash
+
 # ls customizations
 alias ls='ls --color=auto' # always turn on coloring
 alias ll='ls -la' # long listing
@@ -26,3 +28,6 @@ alias cpv='rsync --human-readable --progress'
 alias scr='screen -r' # resume screen session
 alias scrd='screen -rD' # resume screen session which is already attached.
 alias less='less -R' # enable raw char handling for ANSI colors
+
+# launch multipass shell
+alias msh='multipass shell'
