@@ -116,3 +116,32 @@ endif
 "enable modeline
 set modeline
 set modelines=5
+
+"Opens new tab with directory of the currently opened file
+function! OpenTabWithDir()
+    tabe %:p:h
+endfunction
+
+noremap <leader>t :call OpenTabWithDir()<CR>
+
+"markdown specific customizations
+
+"To insert the current timestamp
+nnoremap <Leader>d "=strftime("%m/%d%y %H:%M")<CR>p
+
+"To insert the current timestamp
+noremap <Leader>d "=strftime ("%m/%d/%y %H:%" )<CR>p
+
+"To insert the markdown level header with the current timestamp
+nnoremap <Leader>hd3 "=strftime("### %m/%d/%y %H:%")<CR>p
+
+let g:markdown_folding = 1
+
+"to support syntax highlighting for code blocks in markdown
+let g:markdown_fenced_languages = ['html', 'python', 'vim', 'c', 'cpp', 'go', 'sh']
+
+"Insert another upon entering the starting of the code block
+inoremap ``` ```<CR><CR>```<Esc>ki
+
+"Insert matching backtick inline code block and place the cursor in mode between the two backticks
+inoremap ` ``<Esc>i
